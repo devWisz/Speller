@@ -9,3 +9,46 @@ body {
 h1 {
   margin: 10px 0;
 }
+
+.mode button,
+#restart {
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #00c6ff;
+  color: #000;
+  font-weight: bold;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 15px auto;
+  width: 180px;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.08);
+  background: #e0f7ff;
+}
+
+.win {
+  background: #00ff99 !important;
+} 
