@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Speller",
+  "description": "Super fun Tic Tac Toe with Human & AI modes",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
