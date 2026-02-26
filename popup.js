@@ -32,4 +32,23 @@ function startGame(ai) {
   }
 }
 
+function handleMove(i, cell) {
+  if (board[i] || gameOver) return;
 
+  board[i] = currentPlayer;
+  cell.textContent = currentPlayer;
+
+  if (checkWin(currentPlayer)) {
+    statusEl.textContent = `${currentPlayer} Wins!`;
+    gameOver = true;
+    highlightWin();
+    return;
+  }
+
+  if (board.every(c => c)) {
+    statusEl.textContent = "Draw!";
+    gameOver = true;
+    return;
+  }
+
+  
