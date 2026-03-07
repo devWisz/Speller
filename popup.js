@@ -51,4 +51,10 @@ function handleMove(i, cell) {
     return;
   }
 
-  
+  currentPlayer = currentPlayer === "X" ? "O" : "X";
+  statusEl.textContent = `Player ${currentPlayer} turn`;
+
+  if (aiMode && currentPlayer === "O") {
+    setTimeout(aiMove, 300);
+  }
+}

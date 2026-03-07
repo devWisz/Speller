@@ -1,0 +1,1 @@
+Speller is a browser based extension game simply Tic Tac Toe game but with some fun 
