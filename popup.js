@@ -58,3 +58,24 @@ function handleMove(i, cell) {
     setTimeout(aiMove, 300);
   }
 }
+
+function aiMove() {
+  let bestScore = -Infinity;
+  let move;
+
+  board.forEach((cell, i) => {
+    if (!cell) {
+      board[i] = "O";
+      let score = minimax(board, 0, false);
+      board[i] = "";
+      if (score > bestScore) {
+        bestScore = score;
+        move = i;
+      }
+    }
+  });
+
+  const cell = boardEl.children[move];
+  handleMove(move, cell);
+}
+
