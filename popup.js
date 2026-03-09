@@ -125,4 +125,4 @@ function highlightWin() {
       p.forEach(i => boardEl.children[i].classList.add("win"));
     }
   });
-}
+} 
