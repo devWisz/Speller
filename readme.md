@@ -33,6 +33,7 @@ The game supports both player vs player and player vs AI modes, making it useful
 You can download the extension from the **Releases** section.
 
 Download here:  
+https://github.com/devWisz/Speller/releases/tag/speller
 
 
 ### Install Manually (Chrome / Chromium)
