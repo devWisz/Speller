@@ -79,3 +79,50 @@ function aiMove() {
   handleMove(move, cell);
 }
 
+function minimax(b, depth, isMax) {
+  if (checkWinner("O")) return 10 - depth;
+  if (checkWinner("X")) return depth - 10;
+  if (b.every(c => c)) return 0;
+
+  if (isMax) {
+    let best = -Infinity;
+    b.forEach((c, i) => {
+      if (!c) {
+        b[i] = "O";
+        best = Math.max(best, minimax(b, depth + 1, false));
+        b[i] = "";
+      }
+    });
+    return best;
+  } else {
+    let best = Infinity;
+    b.forEach((c, i) => {
+      if (!c) {
+        b[i] = "X";
+        best = Math.min(best, minimax(b, depth + 1, true));
+        b[i] = "";
+      }
+    });
+    return best;
+  }
+}
+
+function checkWin(player) {
+  return winPatterns.some(p =>
+    p.every(i => board[i] === player)
+  );
+}
+
+function checkWinner(player) {
+  return winPatterns.some(p =>
+    p.every(i => board[i] === player)
+  );
+}
+
+function highlightWin() {
+  winPatterns.forEach(p => {
+    if (p.every(i => board[i] === currentPlayer)) {
+      p.forEach(i => boardEl.children[i].classList.add("win"));
+    }
+  });
+}
