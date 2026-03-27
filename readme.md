@@ -5,6 +5,9 @@ It is designed to be lightweight, fast, and easy to play anytime without opening
 
 The game supports both player vs player and player vs AI modes, making it useful for quick breaks while browsing.
 
+![alt text](speller.png)
+![alt text](speller1.png)
+
 ## Features
 
 - **Human vs Human Mode**  
@@ -58,6 +61,12 @@ The **Speller** extension will now appear in your browser toolbar.
 3. Click any cell on the board to make your move.
 4. The game automatically detects wins and draws.
 5. Click **Restart** to start a new game.
+
+
+
+Inspiration : 
+I was alone in the home losing a lot of chess games so i decided to make a game and play with 
+robot and one of my friend
 
 ## License
 
